@@ -59,9 +59,9 @@
 //               | GUI |     | SPC |     | ENT | ESC | TAB |
                         display-name = "Lower";
                         bindings = <
-   &kp ESCAPE   &sk LSHIFT  &kp UP    &trans   &TAB     &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-   &bt BT_SEL 1 &kp LEFT      &kp DOWN       &kp RIGHT      &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS 
-   &bt BT_CLR   &bt BT_SEL 2  &LC(C)        &LC(V)         &trans         &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL 
+   &kp ESCAPE   &sk LSHIFT    &kp UP       &trans         &kp TAB        &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+   &bt BT_SEL 1 &kp LEFT      &kp DOWN     &kp RIGHT      &kp LA(TAB)        &kp SLASH      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS 
+   &bt BT_CLR   &bt BT_SEL 2  &kp LC(C)    &kp LC(V)      &trans         &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL 
                              &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp BSPC
                         >;
                 };
