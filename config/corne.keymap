@@ -53,31 +53,31 @@
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
-// | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
+// | ESCAPE    |   DELETE |  UP     | CNTRL-T | TAB     |     | *   | 7   | 8   | 9   | +   |
+// |           |  LEFT    | DOWN    | RIGHT   | ALT-TAB |     | /   | 4   | 5   | 6   | -   |
+// |  CNTRL-Z  |  CNTRL-X | CNTRL-C | CNTRL-V | SPC     |     | =   | 1   | 2   | 3   | .   |
+//                                    | GUI |     | SHIFT |     | ENT | 0   | BSPC |
                         display-name = "Lower";
                         bindings = <
-   &kp ESCAPE   &kt LSHIFT    &kp UP       &trans         &kp TAB        &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
-   &bt BT_SEL 1 &kp LEFT      &kp DOWN     &kp RIGHT      &kp LC(TAB)        &kp SLASH      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS 
-   &bt BT_CLR   &bt BT_SEL 2  &kp LC(C)    &kp LC(V)      &trans         &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL 
-                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp BSPC
+   &kp ESCAPE   &kp DELETE    &kp UP       &kp LC(T)         &kp TAB        &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+   &bt trans    &kp LEFT      &kp DOWN     &kp RIGHT      &kp LC(TAB)        &kp SLASH      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS 
+   &Kp LC(Z)    &kp LC(X)     &kp LC(C)    &kp LC(V)      &kp SPACE        &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT 
+                             &kp LGUI     &trans       &kp LSHIFT        AS(RET)   &kp NUMBER_0   &kp BSPC
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+// | !    |  @   |  #   |  $ |  % |         |  ^  |  &  |  *  |  (   |  )   |
+// | -_    |  =+    |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
+// | BTCLR | BT1    |  BT2   |  ,< |  :  |     |  ;  |  .> | CTRL| META |  `~     |
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "Raise";
                         bindings = <
 
-   &kp EXCLAMATION  &kp AT_SIGN &kp HASH   &kp DOLLAR    &kp PERCENT &kp CARET  &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
-   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
-   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
+   &kp EXCLAMATION  &kp AT_SIGN  &kp HASH        &kp DOLLAR   &kp PERCENT &kp CARET   &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
+   AS(MINUS)        AS(EQUAL)    &kp LBRC        &kp LBKT     &kp LPAR    &kp RPAR    &kp RBKT      &kp RBRC     AS(FSLH)             AS(BSLH)
+   &bt BT_CLR       &bt BT_SEL 1 &bt BT_SEL 2    AS(COMMA)    &kp COLON   &kp SEMI    AS(DOT)       &kp LCTRL    &kp RALT AS(GRAVE)
                        &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
                         >;
                 };
