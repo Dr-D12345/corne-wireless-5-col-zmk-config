@@ -20,7 +20,11 @@
 
         screenshot {
             bindings = <&kp LG(LS(S))>;
-            key-positions = <32 11 12 13>;
+            key-positions = <11 12 13 31>; 
+        };
+        TaskManager {
+            bindings = <&kp LC(LS(ESCAPE))>;
+            key-positions = <0 10 20 31>;
         };
     };
     behaviors {
@@ -62,13 +66,13 @@
 // -----------------------------------------------------------------------------------------
 // | ESCAPE    |  CNTRL-W |  UP     | CNTRL-T | TAB     |     | *   | 7   | 8   | 9   | +   |
 // | CAPS-LOCK |  LEFT    | DOWN    | RIGHT   | ALT-TAB |     | /   | 4   | 5   | 6   | -   |
-// | CNTRL-Z   |  CNTRL-X | CNTRL-C | CNTRL-V | DELETE  |     | =   | 1   | 2   | 3   | .   |
+// | CNTRL-Z   |  CNTRL-S | CNTRL-C | CNTRL-V | DELETE  |     | =   | 1   | 2   | 3   | .   |
 //                                    | GUI |     | SHIFT |     | ENT | 0   | BSPC |
                         display-name = "Lower";
                         bindings = <
    &kp ESCAPE    &kp LC(W)     &kp UP       &kp LC(T)      &kp TAB                &kp ASTERISK   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
    &kp CAPSLOCK  &kp LEFT      &kp DOWN     &kp RIGHT      &kp LC(TAB)            &kp SLASH      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS 
-   &kp LC(Z)     &kp LC(X)     &kp LC(C)    &kp LC(V)      &kp DELETE             &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT 
+   &kp LC(Z)     &kp LC(S)     &kp LC(C)    &kp LC(V)      &kp DELETE             &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT 
                                &kp LGUI     &trans       &kp LSHIFT                 AS(RET)   &kp NUMBER_0   &kp BSPC
                         >;
                 };
