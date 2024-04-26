@@ -20,7 +20,7 @@
 
         screenshot {
             bindings = <&kp LG(LS(S))>;
-            key-positions = <31 11 12 13>;
+            key-positions = <32 11 12 13>;
         };
     };
     behaviors {
