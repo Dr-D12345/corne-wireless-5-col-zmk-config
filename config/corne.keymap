@@ -15,7 +15,14 @@
     chosen {
       zmk,matrix_transform = &five_column_transform;
     };
+     combos {
+        compatible = "zmk,combos";
 
+        screenshot {
+            bindings = <&kp LG(LS(S))>;
+            key-positions = <31 11 12 13>;
+        };
+    };
     behaviors {
         ShiftSelect: ShiftSelect {
             compatible = "zmk,behavior-caps-word";
